@@ -23,6 +23,14 @@ func main() {
 func GenerateWallets(number uint32) (error) {
 	var err error
 	{
+		mnemonic:=`label stick flat innocent brother frost rebel aim creek six baby copper need side cannon student announce alpha`
+		mk,err:=wallet.CreateWalletByMnnicAndPwd(,"123456")
+		if err!=nil{
+			fmt.Println(err)
+		}
+		fmt.Println(mk)
+		
+		fmt.Println("--------------------------------------")
 		ret,err:=wallet.CreateWalletByteRandAndPwd([]byte("sdfafdsaf"),"123456")
 		if err!=nil{
 			fmt.Println(err)
