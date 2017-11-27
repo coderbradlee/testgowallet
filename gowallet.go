@@ -23,7 +23,7 @@ func main() {
 func GenerateWallets(number uint32) (error) {
 	var err error
 	{
-		ret,err:=wallet.CreateWalletByteRandAndPwd(nil,"123456")
+		ret,err:=wallet.CreateWalletByteRandAndPwd([]byte("sdfafdsaf"),"123456")
 		if err!=nil{
 			fmt.Println(err)
 		}
