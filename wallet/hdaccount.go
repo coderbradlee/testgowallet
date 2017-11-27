@@ -77,7 +77,7 @@ func CreateWalletByteRandAndPwd(random []byte, password string) (masterKeyWithmn
 	}
 
 	seed, err := generateSeed(random, []byte(password))
-	fmt.Println("The Real seed to byte is: #v%", seed)
+	fmt.Printf("The Real seed to byte is: %#v", seed)
 	if err != nil {
 		return
 	}
@@ -93,7 +93,7 @@ func CreateWalletByteRandAndPwd(random []byte, password string) (masterKeyWithmn
 	if err != nil {
 		return
 	}
-	fmt.Println("The mnemonic word list to byte is: #v%", mnemonicSeed)
+	fmt.Printf("The mnemonic word list to byte is: %#v", mnemonicSeed)
 	masterKeyStr, err := GenerateMasterkey(seed)
 	if err != nil {
 		return
