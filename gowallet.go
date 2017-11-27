@@ -23,6 +23,12 @@ func main() {
 func GenerateWallets(number uint32) (error) {
 	var err error
 	{
+		ret,_:=CreateWalletByteRandAndPwd(nil,"123456")
+		fmt.Println(ret)
+	}
+
+
+	{
 		// var secret, salt string
 		// secret = "ShowSplashViewShowSplashViewShowSplashViewShowSplashView"
 		// salt = "1234567890"
@@ -41,11 +47,11 @@ func GenerateWallets(number uint32) (error) {
 	// signedData, _ := wallet.SendETHRawTxByPrivateKey(privateKey, nonece+3, testAddr, big.NewInt(1000000000), big.NewInt(21000), big.NewInt(18000000000), nil)
 	// fmt.Println("The real signed hex string is ", signedData)
 	{
-		addrandprivateKey, err := wallet.TestbtcNewWalletAccount2()
-		if err != nil {
-			return  err
-		}
-		fmt.Println("The Private key is  " + addrandprivateKey)
+		// addrandprivateKey, err := wallet.TestbtcNewWalletAccount2()
+		// if err != nil {
+		// 	return  err
+		// }
+		// fmt.Println("The Private key is  " + addrandprivateKey)
 	}
 	return err
 }
